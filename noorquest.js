@@ -11,7 +11,8 @@ noorUI=async (divId='noorQuestDiv',url='https://episphere.github.io/quest/questi
     }
     console.log('some NickMarvelousThing happens in the right div',noorUI.div)
     noorUI.txt = await (await fetch(url)).text()
-    noorUI.div.innerHTML=marvelousNick(noorUI.txt)
+    //noorUI.div.innerHTML=marvelousNick(divId.id,noorUI.txt)
+    noorUI.div.innerHTML=transform.render(noorUI.txt)
 }
 
 noorUI()
